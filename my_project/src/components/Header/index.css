@@ -1,0 +1,24 @@
+.header{
+    box-sizing: border-box;
+    background-color: black;
+    height: 169px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header_banner{
+    height: 42px;
+}
+.header_wrapper{
+    height: 121px;
+}
+.header_content{
+    padding: 20px 0 12px 0;
+    height: 90px;
+}
+.header_logo{
+    display: flex;
+    justify-content: center;
+}
