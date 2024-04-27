@@ -1,33 +1,61 @@
-import React from 'react'
-import '../Header/index.css'
+import React, { useState } from 'react'
+
+import '../../styles/global.css'
+
 function Header() {
+const [nav, setNav] = useState(false)
+ function Toggle () {
+setNav(!nav)
+ }
   return (
-    <div className='header '>
-        <div className="header_banner"></div>
-        <div className="header_wrapper">
-            <div className="header_content">
-                <div className="header_logo"> <a href="/"><img className='logo_img' src="https://www.maybelline.com/-/media/project/loreal/brand-sites/mny/master/demo/logos-logo-small.svg?rev=-1" width="155" height="24" alt="Maybelline New York | Go to Home Page" /></a></div>
-                <div className="header_nav">
-                  <nav>
-                    <ul className='nav_li'>
-                      <li className='nav_l1'>VIRTUAL BEAUTY STUDIO</li>
-                      <li className='nav_l1'>NEW</li>
-                      <li className='nav_l1'>COLLECTIONS</li>
-                      <li className='nav_l1'>EYE MAKEUP</li>
-                      <li className='nav_l1'>FACE MAKEUP</li>
-                      <li className='nav_l1'>LIP MAKEUP</li>
-                      <li className='nav_l1'>MAKEUP TIPS</li>
-                      <li className='nav_l1'>BRAVE TOGETHER</li>
-                      <li className='nav_l1 double'>VALENTINE'S DAY</li>
-                    </ul>
-                  </nav>
-                </div>
-            </div>
-            </div>
+    <header className='header'>
+
+    <div className="header_wrapper">
+        <div className="header_content">
+            <div className="header_logo"> <a href="/"><img className='logo_img' src="https://www.maybelline.com/-/media/project/loreal/brand-sites/mny/master/demo/logos-logo-small.svg?rev=-1" width="155" height="24" alt="Maybelline New York | Go to Home Page" /></a></div>
+     
+          <button onClick={Toggle}  className="header__burger"> 
+         
+          <img className={`header__burger_menu ${!nav ? 'header__close_menu' : ' hidden'}`} src="images/burger1.png" alt="brg" /> 
+          <img className={`header__close_menu ${!nav ? 'hidden' : ''} `} src="images/Close-2.png" alt="close" /> 
+        </button>
         
-      ugkbgliu
-    </div>
+            <div className={`header_nav ${nav ? 'open' : ''}`}>
+
+                <ul className='nav_li'>
+                  <li className='nav_l1'><a href="menu.html"> VIRTUAL BEAUTY STUDIO </a></li>
+            <li className='nav_l1'><a href="menu.html"> NEW</a></li>
+            <li className='nav_l1'> <a href="menu.html">COLLECTIONS</a></li>
+            <li className='nav_l1'><a href="menu.html">EYE MAKEUP </a></li>
+            <li className='nav_l1'><a href="menu.html">FACE MAKEUP </a></li>
+            <li className='nav_l1'><a href="menu.html">LIP MAKEUP</a></li>
+            <li className='nav_l1'><a href="menu.html">MAKEUP TIPS</a></li>
+            <li className='nav_l1'><a href="menu.html">BRAVE TOGETHER</a></li>
+
+ 
+                </ul>
+         
+            </div>
+          
+        </div>
+        </div>
+        <nav className={` ${nav ? 'close' : 'aside'}`}>
+          <ul className='aside__nav_li'>
+            <li className='aside__nav_l1'><a href="menu.html"> VIRTUAL BEAUTY STUDIO </a></li>
+            <li className='aside__nav_l1'><a href="menu.html"> NEW</a></li>
+            <li className='aside__nav_l1'> <a href="menu.html">COLLECTIONS</a></li>
+            <li className='aside__nav_l1'><a href="menu.html">EYE MAKEUP </a></li>
+            <li className='aside__nav_l1'><a href="menu.html">FACE MAKEUP </a></li>
+            <li className='aside__nav_l1'><a href="menu.html">LIP MAKEUP</a></li>
+            <li className='aside__nav_l1'><a href="menu.html">MAKEUP TIPS</a></li>
+            <li className='aside__nav_l1'><a href="menu.html">BRAVE TOGETHER</a></li>
+
+          </ul>
+        </nav>
+      </header>
+
+    
   )
 }
 
-export default Header
+export default Header;
