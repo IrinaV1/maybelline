@@ -1,4 +1,5 @@
 import '../../styles/global.css'
+import { Link } from 'react-router-dom';
 
 
 function Footer() {
@@ -9,12 +10,12 @@ return(
 <div className="footer_links">
   <div className="footer__main-links">
   <ul className="footer_li">
-    <li className="footer_l1"> <a href="./menu.html">ABOUT MAYBELLINE </a></li>
-    <li  className="footer_l1"> <a href="./menu.html">CONSCIOUS TOGETHER</a></li>
-    <li  className="footer_l1"><a href="./menu.html"> COLLEGE TOUR</a></li>
-    <li  className="footer_l1"> <a href="./menu.html">SAFETY PROMISE</a></li>
-    <li  className="footer_l1"><a href="./menu.html">FAQ/CONTACT US </a></li>
-    <li  className="footer_l1"><a href="./menu.html">SITEMAP </a></li>
+    <li className="footer_l1"> <Link to="/Menu">ABOUT MAYBELLINE </Link></li>
+    <li  className="footer_l1"> <Link to="/Menu">CONSCIOUS TOGETHER</Link></li>
+    <li  className="footer_l1"><Link to="/Menu"> COLLEGE TOUR</Link></li>
+    <li  className="footer_l1"> <Link to="/Menu">SAFETY PROMISE</Link></li>
+    <li  className="footer_l1"><Link to="/Menu">FAQ/CONTACT US </Link></li>
+    <li  className="footer_l1"><Link to="/Menu">SITEMAP </Link></li>
   </ul>
 </div>
 <div className="footer__other-links">

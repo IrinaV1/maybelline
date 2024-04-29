@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import '../../styles/global.css'
+import { Link } from 'react-router-dom'
 
 function Header() {
 const [nav, setNav] = useState(false)
@@ -23,14 +24,14 @@ setNav(!nav)
             <div className={`header_nav ${nav ? 'open' : ''}`}>
 
                 <ul className='nav_li'>
-                  <li className='nav_l1'><a href="menu.html"> VIRTUAL BEAUTY STUDIO </a></li>
-            <li className='nav_l1'><a href="menu.html"> NEW</a></li>
-            <li className='nav_l1'> <a href="menu.html">COLLECTIONS</a></li>
-            <li className='nav_l1'><a href="menu.html">EYE MAKEUP </a></li>
-            <li className='nav_l1'><a href="menu.html">FACE MAKEUP </a></li>
-            <li className='nav_l1'><a href="menu.html">LIP MAKEUP</a></li>
-            <li className='nav_l1'><a href="menu.html">MAKEUP TIPS</a></li>
-            <li className='nav_l1'><a href="menu.html">BRAVE TOGETHER</a></li>
+                  <li className='nav_l1'><Link to="/Menu"> VIRTULinkL BEAUTY STUDIO </Link></li>
+            <li className='nav_l1'><Link to="/Menu"> NEW</Link></li>
+            <li className='nav_l1'> <Link to="/Menu">COLLECTIONS</Link></li>
+            <li className='nav_l1'><Link to="/Menu">EYE MAKEUP </Link></li>
+            <li className='nav_l1'><Link to="/Menu">FACE MAKEUP </Link></li>
+            <li className='nav_l1'><Link to="/Menu">LIP MAKEUP</Link></li>
+            <li className='nav_l1'><Link to="/Menu">MAKEUP TIPS</Link></li>
+            <li className='nav_l1'><Link to="/Menu">BRAVE TOGETHER</Link></li>
 
  
                 </ul>
@@ -41,14 +42,14 @@ setNav(!nav)
         </div>
         <nav className={` ${nav ? 'close' : 'aside'}`}>
           <ul className='aside__nav_li'>
-            <li className='aside__nav_l1'><a href="menu.html"> VIRTUAL BEAUTY STUDIO </a></li>
-            <li className='aside__nav_l1'><a href="menu.html"> NEW</a></li>
-            <li className='aside__nav_l1'> <a href="menu.html">COLLECTIONS</a></li>
-            <li className='aside__nav_l1'><a href="menu.html">EYE MAKEUP </a></li>
-            <li className='aside__nav_l1'><a href="menu.html">FACE MAKEUP </a></li>
-            <li className='aside__nav_l1'><a href="menu.html">LIP MAKEUP</a></li>
-            <li className='aside__nav_l1'><a href="menu.html">MAKEUP TIPS</a></li>
-            <li className='aside__nav_l1'><a href="menu.html">BRAVE TOGETHER</a></li>
+            <li className='aside__nav_l1'><a href="/Menu"> VIRTUAL BEAUTY STUDIO </a></li>
+            <li className='aside__nav_l1'><a href="/Menu"> NEW</a></li>
+            <li className='aside__nav_l1'> <a href="/Menu">COLLECTIONS</a></li>
+            <li className='aside__nav_l1'><a href="/Menu">EYE MAKEUP </a></li>
+            <li className='aside__nav_l1'><a href="/Menu">FACE MAKEUP </a></li>
+            <li className='aside__nav_l1'><a href="/Menu">LIP MAKEUP</a></li>
+            <li className='aside__nav_l1'><a href="/Menu">MAKEUP TIPS</a></li>
+            <li className='aside__nav_l1'><a href="/Menu">BRAVE TOGETHER</a></li>
 
           </ul>
         </nav>
