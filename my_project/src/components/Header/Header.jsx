@@ -24,14 +24,14 @@ setNav(!nav)
             <div className={`header_nav ${nav ? 'open' : ''}`}>
 
                 <ul className='nav_li'>
-                  <li className='nav_l1'><Link to="/Menu"> VIRTULinkL BEAUTY STUDIO </Link></li>
-            <li className='nav_l1'><Link to="/Menu"> NEW</Link></li>
-            <li className='nav_l1'> <Link to="/Menu">COLLECTIONS</Link></li>
-            <li className='nav_l1'><Link to="/Menu">EYE MAKEUP </Link></li>
-            <li className='nav_l1'><Link to="/Menu">FACE MAKEUP </Link></li>
-            <li className='nav_l1'><Link to="/Menu">LIP MAKEUP</Link></li>
-            <li className='nav_l1'><Link to="/Menu">MAKEUP TIPS</Link></li>
-            <li className='nav_l1'><Link to="/Menu">BRAVE TOGETHER</Link></li>
+                  <li className='nav_l1'><Link to="/menu"> VIRTULinkL BEAUTY STUDIO </Link></li>
+            <li className='nav_l1'><Link to="/menu"> NEW</Link></li>
+            <li className='nav_l1'> <Link to="/menu">COLLECTIONS</Link></li>
+            <li className='nav_l1'><Link to="/menu">EYE MAKEUP </Link></li>
+            <li className='nav_l1'><Link to="/menu">FACE MAKEUP </Link></li>
+            <li className='nav_l1'><Link to="/menu">LIP MAKEUP</Link></li>
+            <li className='nav_l1'><Link to="/menu">MAKEUP TIPS</Link></li>
+            <li className='nav_l1'><Link to="/menu">BRAVE TOGETHER</Link></li>
 
  
                 </ul>
@@ -42,14 +42,14 @@ setNav(!nav)
         </div>
         <nav className={` ${nav ? 'close' : 'aside'}`}>
           <ul className='aside__nav_li'>
-            <li className='aside__nav_l1'><a href="/Menu"> VIRTUAL BEAUTY STUDIO </a></li>
-            <li className='aside__nav_l1'><a href="/Menu"> NEW</a></li>
-            <li className='aside__nav_l1'> <a href="/Menu">COLLECTIONS</a></li>
-            <li className='aside__nav_l1'><a href="/Menu">EYE MAKEUP </a></li>
-            <li className='aside__nav_l1'><a href="/Menu">FACE MAKEUP </a></li>
-            <li className='aside__nav_l1'><a href="/Menu">LIP MAKEUP</a></li>
-            <li className='aside__nav_l1'><a href="/Menu">MAKEUP TIPS</a></li>
-            <li className='aside__nav_l1'><a href="/Menu">BRAVE TOGETHER</a></li>
+            <li className='aside__nav_l1'><Link to="/menu"> VIRTUAL BEAUTY STUDIO </Link></li>
+            <li className='aside__nav_l1'><Link to="/menu"> NEW</Link></li>
+            <li className='aside__nav_l1'> <Link to="/menu">COLLECTIONS</Link></li>
+            <li className='aside__nav_l1'><Link to="/menu">EYE MAKEUP </Link></li>
+            <li className='aside__nav_l1'><Link to="/menu">FACE MAKEUP </Link></li>
+            <li className='aside__nav_l1'><Link to="/menu">LIP MAKEUP</Link></li>
+            <li className='aside__nav_l1'><Link to="/menu">MAKEUP TIPS</Link></li>
+            <li className='aside__nav_l1'><Link to="/menu">BRAVE TOGETHER</Link></li>
 
           </ul>
         </nav>
