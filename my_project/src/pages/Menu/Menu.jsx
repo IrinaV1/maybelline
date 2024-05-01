@@ -13,7 +13,7 @@ function Menu() {
 
               <main className="main">
                 <div className="content_container">
-<Links />
+<Links activeLink={1}/>
 <div className="menu__main">
 <h1>Stay on top of new products, promotions, events and more.</h1>
 </div>
