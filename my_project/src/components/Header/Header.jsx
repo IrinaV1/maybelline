@@ -24,7 +24,7 @@ setNav(!nav)
             <div className={`header_nav ${nav ? 'open' : ''}`}>
 
                 <ul className='nav_li'>
-                  <li className='nav_l1'><Link to="/menu"> VIRTULinkL BEAUTY STUDIO </Link></li>
+                  <li className='nav_l1'><Link to="/menu"> VIRTUAL BEAUTY STUDIO </Link></li>
             <li className='nav_l1'><Link to="/menu"> NEW</Link></li>
             <li className='nav_l1'> <Link to="/menu">COLLECTIONS</Link></li>
             <li className='nav_l1'><Link to="/menu">EYE MAKEUP </Link></li>
