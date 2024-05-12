@@ -125,7 +125,15 @@ line-height: 1.6;
 .aside{
     display: none;
 }
+.card_row{  
 
+    display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 столбца */
+  gap: 10px;
+
+margin: 0 10px;
+    
+}
 .main{
 background: #ffff;
 display: block;
@@ -1063,6 +1071,16 @@ line-height: 0.9;
  }
 
 @media (max-width: 991.98px) { 
+    .card_row{  
+
+   
+      grid-template-columns: repeat(3, 1fr); /* 4 столбца */
+      gap: 7px;
+   
+    
+    margin: 0 10px;
+        
+    }
     .header_content{
         padding: 0;
     }
@@ -1556,7 +1574,15 @@ padding: 0;
         width: 100%;
     }
    
+    .card_row{  
 
+      grid-template-columns: repeat(2, 1fr); /* 4 столбца */
+      gap: 5px;
+  
+    
+    margin: 0 5px;
+        
+    }
  }
 
 @media (max-width: 575.98px) { 
