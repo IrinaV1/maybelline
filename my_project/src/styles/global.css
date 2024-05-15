@@ -145,7 +145,61 @@ width: 100%;
 margin: 0 auto;
 padding: 0;
 }
+.links_header{
+    display: flex;
+    justify-content: space-between;
+}
+.links_image{
+    margin-right: 20px;
+    
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+.toggle-cart{
+    cursor: pointer;
+    border: none;
+    background-color: #ffffff;
+    z-index: 1;
+}
+.cart-container {
+    position: relative; /* Позволяет позиционировать абсолютный элемент относительно этого контейнера */
+    display: inline-block;
+     /* Делает контейнер строчно-блочным, чтобы он занимал только необходимое пространство */
+}
+.cart-badge {
+    position: absolute; /* Позволяет абсолютно позиционировать элемент */
+    top: 5px; /* Расположение кружка относительно верхнего края корзины */
+    right: 32px; /* Расположение кружка относительно правого края корзины */
+    width: 12px; /* Размер кружка */
+    height: 12px;
+    background-color: red;
+    border-radius: 50%; /* Делает кружок */
+    z-index: 2;
+    /* Позволяет кружку быть поверх изображения корзины */
+}
+.cart-panel {
+    position: fixed;
+    top: 100px;
+    left: -300px; /* По умолчанию скрыта за пределами экрана */
+    bottom: 0;
 
+    background-color: #fbfbfc;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.5s ease; /* Анимация сглаженного выезда */
+    overflow-y: auto; 
+    z-index: 0;/* Добавляем прокрутку, если содержимое слишком длинное */
+}
+
+.cart-panel.open {
+    left: 0;
+    top: 100px;
+    background: #fbfbfc;
+    height: 90vh;
+    width: 100%;
+    z-index: 0;
+ /* При открытии, выезжает на экран */
+}
 .content_container{
 height: 100%;
     max-width: 1440px;
@@ -1586,6 +1640,14 @@ padding: 0;
  }
 
 @media (max-width: 575.98px) { 
+    .links_image{
+        margin-right: 0px;
+        
+       
+    }
+    .cart-badge {
+        right: 12px; /* Расположение кружка относительно правого края корзины */
+    }
     .header__burger{
         right: 5px;
     }

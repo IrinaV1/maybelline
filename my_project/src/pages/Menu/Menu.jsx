@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../../styles/global.css'
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
@@ -80,6 +80,13 @@ function Menu() {
       "image": "https://www.maybelline.com/-/media/project/loreal/brand-sites/mny/americas/us/lips-makeup/lip-balm/baby-lips-lip-makeup-crystal-moisturizing-lip-balm/maybelline-baby-lips-lip-balm-crystals-pink-quartz-041554424591-o.jpg?rev=cc842ce68f9543a9b5d561afdc7389e3&cx=0.25&cy=0.31&cw=760&ch=1138&hash=179396D649F79A8DBF8ABDA45DA74EE9",
       "price": "8.99"
     }]
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleCart = () => {
+        setIsOpen(!isOpen);
+    };
+
   return (
        <div className="wrapper">
 
@@ -87,7 +94,23 @@ function Menu() {
 
               <main className="main">
                 <div className="content_container">
+                  <div className="links_header">
 <Links activeLink={1}/>
+<div className="cart-container">
+  <button className='toggle-cart' onClick={toggleCart}>
+<img className='links_image' src="images/icons8-48.png" alt="images" />
+<span className="cart-badge"></span>
+</button>
+<aside className={isOpen ? 'cart-panel open' : 'cart-panel'}>
+       
+        <ul>
+            <li>Товар 1</li>
+            <li>Товар 2</li>
+            <li>Товар 3</li>
+        </ul>
+    </aside>
+</div>
+</div>
 <div className="menu__main">
 <h1>Stay on top of new products, promotions, events and more.</h1>
 </div>
