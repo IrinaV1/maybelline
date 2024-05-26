@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import '../../styles/global.css'
-import Footer from '../../components/Footer/Footer'
+import Footer from '../../components/footer/Footer'
 import Header from '../../components/Header/Header'
 import Card from './Card'
 import Links from '../Links/Links'
@@ -111,9 +111,7 @@ function Menu() {
     </aside>
 </div>
 </div>
-<div className="menu__main">
-<h1>Stay on top of new products, promotions, events and more.</h1>
-</div>
+
 <div className="card_row">
 {Products.map(product =>(
 <Card  
@@ -123,6 +121,9 @@ function Menu() {
   price={product.price}
 />
 ))}
+</div>
+<div className="menu__main">
+<h1>Stay on top of new products, promotions, events and more.</h1>
 </div>
 </div>
               </main>
