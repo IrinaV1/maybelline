@@ -29,7 +29,10 @@ useEffect(() => {
   // Очистка интервала при размонтировании компонента
   return () => clearInterval(interval);
 }, []);
+
+
 return (
+  
     <div className="component">
     <div className="carousel">
     <div className="carousel__wrapper">

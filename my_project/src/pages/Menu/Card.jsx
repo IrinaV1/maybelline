@@ -2,7 +2,7 @@ import React from 'react'
 import './card.css'
 import '../../styles/global.css'
 
-function Card({name, price, images}) {
+function Card({id, name, price, images, onAddToCart}) {
   return (
   
     <div className='card'>
@@ -12,8 +12,8 @@ function Card({name, price, images}) {
       </div>
       
       <div className="card_bottom">
-      <div className="card_price">{price}</div>
-      <button className='card_btn'>Buy</button>
+      <div className="card_price">{price} $</div>
+      <button className='card_btn' onClick={() => onAddToCart({ id, name, price, images })}>Buy</button>
       </div>
     </div>
 

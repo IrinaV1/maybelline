@@ -1,4 +1,4 @@
-import Hero from "../Hero/Hero";
+import Hero from "../hero/Hero";
 import Swiper from "../Swiper/Swiper";
 import Transporent from "../Transporent/Transporent";
 
