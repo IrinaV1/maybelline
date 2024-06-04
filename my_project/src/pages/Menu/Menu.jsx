@@ -83,7 +83,10 @@ function Menu() {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState(() => {
+      const savedCart = localStorage.getItem('cart');
+      return savedCart ? JSON.parse(savedCart) : [];
+    });
 
     //useEffect(() => {
     //  const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -96,32 +99,31 @@ function Menu() {
    //   localStorage.setItem('cart', JSON.stringify(cart));
   //  }, [cart]);
 
-  useEffect(() => {
-    try {
-      const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
-      console.log("Loaded cart from localStorage:", savedCart);
-      setCart(savedCart);
-    } catch (error) {
-      console.error("Error parsing cart data from localStorage:", error);
-      setCart([]);
-    }
-  }, []);
+
 
   useEffect(() => {
-    if (cart.length > 0) {
-      console.log("Saving cart to localStorage:", cart);
-      localStorage.setItem('cart', JSON.stringify(cart));
-    }
-  }, [cart]);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart]);
 
     const toggleCart = () => {
         setIsOpen(!isOpen);
     };
 
-    const addToCart = (product) => {
-      setCart((prevCart) => [...prevCart, product]);
+    const addToCart = (productToAdd) => {
+      const existingProduct = cart.find(item => item.id === productToAdd.id);
+      if (existingProduct) {
+        const updatedCart = cart.map(item =>
+          item.id === existingProduct.id ? { ...item, quantity: item.quantity + 1 } : item
+        );
+        setCart(updatedCart);
+      } else {
+        setCart(prevCart => [...prevCart, { ...productToAdd, quantity: 1 }]);
+      }
     };
   
+const delToCart =  (productId) => {
+  setCart(prevCart => prevCart.filter(item => item.id !== productId));
+};
 
   return (
        <div className="wrapper">
@@ -142,13 +144,16 @@ function Menu() {
 
 <aside className={isOpen ? 'cart-panel open' : 'cart-panel'}>    
 <ul>
-        {cart.map((item, index) => (
+        {cart.map((item) => (
            
                     <li  className='cart' key={item.id}>
+                      <div className="cart_box">
                       <div className="cart_name">{item.name}</div>
-                      <img className='cart_image' src={item.images} alt="image" />
+                      <img className='cart_image' src={item.image} alt="image" />
                     <div className="cart_price">{item.price}$</div>
-                    <button className='cart_btn'>Delete</button>
+                    <div className="cart_quantity">Quantity: {item.quantity}</div>
+                    <button onClick={() => delToCart(item.id)} className='cart_btn'>Delete</button>
+                    </div>
                     </li>
                    
                   ))} 
@@ -164,9 +169,9 @@ function Menu() {
 <Card  
   key={product.id}
   name={product.name}
-  images={product.image}
+  image={product.image}
   price={product.price}
-  onAddToCart={addToCart}
+  onAddToCart={() => addToCart(product)}
 />
 ))}
 </div>

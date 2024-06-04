@@ -185,7 +185,7 @@ padding: 0;
 .cart-panel {
     position: fixed;
     top: 170px;
-    left: -580px; /* По умолчанию скрыта за пределами экрана */
+    left: -1280px; /* По умолчанию скрыта за пределами экрана */
     bottom: 0;
 
     background-color: #fbfbfc;
@@ -199,28 +199,43 @@ padding: 0;
     left: 0;
     top: 170px;
     background: #fbfbfc;
-    height: 90vh;
+    height: 100vh;
     width: 90%;
     z-index: 0;
+    margin-bottom: 50px;
  /* При открытии, выезжает на экран */
 }
 
 .cart{
     display: block;
-    margin-bottom: 20px;
+   
+   
+ 
+}
+.cart_box{
     padding: 10px;
+    margin: 15px 25px 40px;
     box-sizing: border-box;
     border: 1px solid #ccc; /* Граница карточки */
     border-radius: 5px;
     background-color: rgb(246, 247, 247);
     height: auto;
 }
+.cart_name{
+    font-size: 1.2em;
+    margin: 10px auto;
+}
 .cart_image{
     object-fit: cover;
     height: auto;
-    width: 35%;
+    width: 15%;
     margin: 0 auto;
     border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.cart_price{
+    font-size: 1.2em;
+    margin: 5px auto;
 }
 .cart_btn{
     background-color: black;
@@ -810,7 +825,7 @@ border: none;
        display: grid;
   position: relative;
   top: 0px;
-  left: -1200px;
+  left: -1280px;
         min-height: 100vh;
         height: 100%;
         background-color: #000000;
@@ -842,7 +857,7 @@ border: none;
     .cart-panel {
         position: fixed;
         top: 100px;
-        left: -700px; /* По умолчанию скрыта за пределами экрана */
+        left: -1280px; /* По умолчанию скрыта за пределами экрана */
         bottom: 0;
     
         background-color: #fbfbfc;
@@ -1700,6 +1715,36 @@ padding: 0;
  }
 
 @media (max-width: 575.98px) { 
+    .cart{
+        display: block;
+        margin-bottom: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc; /* Граница карточки */
+        border-radius: 5px;
+        background-color: rgb(246, 247, 247);
+        height: auto;
+    }
+    .cart_image{
+        object-fit: cover;
+        height: auto;
+        width: 35%;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+    }
+    .cart_btn{
+        background-color: black;
+        color: #ccc;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+       
+        margin: 10px auto 5px;
+        margin-bottom: 5px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    
+    }
     .links_image{
         margin-right: 0px;
         
